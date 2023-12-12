@@ -1,0 +1,100 @@
+.qs_main {
+  background-color: #333333;
+  color: #efefef;
+  text-align: left;
+  position: absolute;
+  width: 200px;
+  font: 12px sans-serif;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.35);
+  user-select: none;
+  -webkit-user-select: none;
+  border: none
+}
+.qs_content {
+  background-color: #3b3b3b;
+  overflow-y: auto
+}
+.qs_title_bar {
+  background-color: #222222;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  padding: 5px;
+  font-weight: bold;
+  border: none;
+}
+.qs_container {
+  margin: 5px;
+  padding: 5px;
+  background-color: #222222;
+  border: none;
+  position: relative
+}
+.qs_button {
+  background-color: #111111;
+  color: #efefef;
+  height: 24px;
+  cursor: pointer;
+  border: 1px solid #111111;
+  font: 12px sans-serif
+}
+.qs_button:active {
+  background-color: #1d1d1d;
+  border: 1px solid #555555
+}
+.qs_button:focus {
+  border: 1px solid #292929;
+  outline: none
+}
+.qs_text_input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 0 0 5px;
+  height: 24px;
+  border: 1px inset #111111;
+  background-color: #111111;
+  color: #efefef;
+  font-size: 12px
+}
+.qs_text_input:focus {
+  outline: none;
+  background: #111111;
+  border: 1px inset #111111
+}
+.qs_label {
+  margin-bottom: 3px;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+  font: 12px sans-serif
+}
+.qs_select {
+  cursor: pointer;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAp0lEQVRIS+2SsQ3FIAwF7RVYhA5mgQFhFuhYhJKWL0eKxI8SGylKZ0p4+OBsHGNM+HChAiS7qkgyBKrovaLeOxhjbgtxZ+cFtgelFMg5QwgBvPd/EO5sDbKAlBLUWo/8CjmL075zDmKMj6rEKbpCqBL9aqc4ZUQAhVbInBMQUXz5Vg/WfxOktXZsWWtZLds9uIqlqaH1NFV3jdhSJA47E1CAaE8ViYp+wGiWMZ/T+cgAAAAASUVORK5CYII=') no-repeat right #1d1d1d;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #111111;
+  appearance: none;
+  color: #efefef;
+  width: 100%;
+  height: 24px;
+  border: 1px inset #111111;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0 5px;
+  /*-moz-outline: none;*/
+  font-size: 14px
+}
+.qs_select option {
+  font-size: 14px
+}
+.qs_select::-ms-expand {
+  display: none
+}
+.qs_select:focus {
+  outline: none
+}

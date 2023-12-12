@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fractal Generator v2</title>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      background: #181818;
+      color: #efefef;
+    }
+    main {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      padding: auto;
+    }
+    #main_screen {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      padding: auto;
+      text-align: center;
+    }
+    .textbox_panel {
+      max-height: 150px;
+      overflow-y: scroll;
+    }
+    #fractal_renderer {
+      position: relative;
+      top: -450%;
+      left: -450%;
+      border: 3px solid #d3d3d3;
+    }
+  </style>
+  <link type="text/css" href="styles/qs_dark_theme.css" rel="stylesheet">
+</head>
+
+<body>
+  <!--<header>
+    <!--<div class="hh">-- >
+
+      <h2>Fractal Generator v2</h2>
+      <h1>Личный сайт</h1>
+    <!--</div>-- >
+  </header>-->
+  <main>
+    <div id="main_screen" height="100%" width="100%">
+        <!--<canvas id="turtlecanvas" width="100%" height="100%"></canvas>
+        <canvas id="imagecanvas"  width="100%" height="100%"></canvas>-->
+      <svg id="fractal_renderer" style="stroke:rgb(255,0,0);stroke-width:2;" height="1000%" width="1000%">
+        <line x1="0" y1="0" x2="0" y2="0" />
+        <!--<line x1="710px" y1="463.5px" x2="720px" y2="473.5px"/>-->
+        <!--<line x1="100" y1="10" x2="190" y2="210" />-->
+      </svg>
+    </div>
+  </main>
+  <div class="qs_main" style="z-index: 2; left: 0px; top: 0px;">
+    <div class="qs_title_bar">Fractal Generator</div>
+    <div id="container" class="qs_content">
+      <div class="qs_container">
+        <div class="qs_label"><b>Условия</b></div>
+        <div id="conds" class="textbox_panel">
+
+          <!--<div style="display: flex;">
+            <input class="qs_text_input" type="text" value="F:">
+            <select class="qs_select">
+              <option label="drawLine"></option>
+              <option label="drawLcine"></option>
+              <option label="drawdine"></option>
+            </select>
+          </div>-->
+        </div>
+        <div style="display: flex;">
+          <input id="add_cond" class="qs_button" style="margin-top: 3px;" type="button" value="Добавить">
+          <input id="del_cond" class="qs_button" style="margin-top: 3px; margin-left: 3px;" type="button" value="Удалить">
+          <input id="hlp_cond" class="qs_button" style="margin-top: 3px; margin-left: 3px; width: 24px;" type="button" value="?">
+        </div>
+      </div>
+      <div class="qs_container">
+        <div class="qs_label"><b>Правила</b></div>
+        <div id="rules" class="textbox_panel"></div>
+        <div style="display: flex;">
+          <input id="add_rule" class="qs_button" style="margin-top: 3px;" type="button" value="Добавить">
+          <input id="del_rule" class="qs_button" style="margin-top: 3px; margin-left: 3px;" type="button" value="Удалить">
+          <input id="hlp_rule" class="qs_button" style="margin-top: 3px; margin-left: 3px; width: 24px;" type="button" value="?">
+        </div>
+      </div>
+      <div class="qs_container">
+        <div class="qs_label"><b>Аксиома</b></div>
+        <input id="axiom" class="qs_text_input" type="text">
+      </div>
+      <div class="qs_container">
+        <div class="qs_label"><b>Цвет по умолчанию</b></div>
+        <input id="color" class="qs_text_input" type="text">
+      </div>
+      <div class="qs_container">
+        <div class="qs_label"><b>Ширина линий по умолчанию</b></div>
+        <input id="lineWidth" class="qs_text_input" type="number">
+      </div>
+      <div class="qs_container">
+        <div class="qs_label"><b>Длина линий по умолчанию</b></div>
+        <input id="lineLength" class="qs_text_input" type="number">
+      </div>
+      <div class="qs_container">
+        <div class="qs_label"><b>Угол по умолчанию</b></div>
+        <input id="angle" class="qs_text_input" type="number">
+      </div>
+      <div class="qs_container">
+        <div class="qs_label"><b>Количество итераций</b></div>
+        <input id="iters" class="qs_text_input" type="number">
+      </div>
+      <div class="qs_container" style="display: flex;">
+        <input id="generate" class="qs_button" type="button" value="Сгенерировать">
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="config.js"></script>
+  <script type="text/javascript" src="scripts/plotter_svg.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+
+</html>
+<!--
+  https://hanumanum.github.io/js-turtle/index_en.html#
+  https://www.schoolsw3.com/howto/howto_js_draggable.php
+  https://www.jsdelivr.com/package/npm/quicksettings
+  https://plnkr.co/edit/HnUKlli769l1PlN3?p=preview&preview
+  
+  
+  
+  
+-->
